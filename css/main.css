@@ -1,0 +1,146 @@
+/* HELPER */
+*{
+    margin: 0;
+}
+
+/* HEADER */
+header{
+    background-color: #1abc9c;
+}
+
+.header-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: baseline;
+    padding: 40px;
+}
+
+.user-informations{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 40px;
+}
+
+.user-informations .user-role{
+    font-size: 32px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.user-avatar{
+    background: url('img/user-avatar.png') no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+}
+
+/* Rest of the page */
+.main-content{
+
+}
+
+.main-content .colab-list{
+    padding: 0px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: stretch;
+    overflow-x: scroll;
+}
+
+.colab-list .colab-item{
+    list-style: none;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+    padding: 40px;
+    min-width: 25%;
+    text-align: center;
+}
+
+.colab-list .colab-item:active{
+    color: #1abc9c;
+    padding-bottom: 36px;
+    border-bottom: 4px solid #1abc9c;
+}
+
+
+.task-list{
+
+}
+
+.task-list .task-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+}
+
+.task-item:before input:checked{
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: green;
+    opacity: 0.3;
+}
+
+.task-item .task-name{
+    color: #444;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.task-checkbox input{
+    position: absolute;
+    left: -9999px;
+}
+
+label {
+    display: block;
+    position: relative;
+    margin-right: 70px;
+    padding: 30px;
+    border: 3px solid #bbb;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .2s;
+}
+
+label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    width: 44px;
+    border: 6px solid #fff;
+    border-radius: 100px;
+    transition: background-color .2s;
+}
+
+label:first-of-type {
+  transform: translateX(-40px);
+}
+
+label:last-of-type {
+  transform: translateX(40px);
+}
+
+input:checked + label {
+    border: 3px solid #1abc9c;
+  background-color: #1abc9c;
+}
+
+input:checked + label::before {
+  background-color: #1abc9c;
+}
